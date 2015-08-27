@@ -1,0 +1,20 @@
+{
+  "name": "react-hot-boilerplate",
+  "version": "1.0.0",
+  "homepage": "https://github.com/hieudt/redux-tic-tac-toe.git",
+  "authors": [
+    "Hieu Do <mr.hieudt@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}
