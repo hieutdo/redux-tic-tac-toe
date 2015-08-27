@@ -6,13 +6,13 @@ export default class Cell extends Component {
     }
     render() {
         var cellClass = 'cell ';
-        var iconClass = 'icon fa ';
+        var iconClass = 'fa ';
 
         if (this.props.symbol) {
             cellClass += 'cell-'+this.props.symbol;
             iconClass += this.props.symbol == 'O' ? 'fa-circle-o' : 'fa-times';
         } else {
-            iconClass = 'hidden';
+            iconClass += this.props.turn == 'O' ? 'fa-circle-o' : 'fa-times';
         }
 
         return (

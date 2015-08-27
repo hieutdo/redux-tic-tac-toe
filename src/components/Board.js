@@ -9,7 +9,7 @@ export default class Board extends Component {
     render() {
         var gameResult = '';
         if (this.props.winner === 'O' || this.props.winner === 'X') {
-            gameResult = 'Player ' + this.props.winner + ' won!'
+            gameResult = 'Player ' + this.props.winner + ' wins !'
         } else if (this.props.winner === 'd') {
             gameResult = 'Draw game';
         }
@@ -21,13 +21,14 @@ export default class Board extends Component {
                             key={index}
                             index={index}
                             symbol={symbol}
+                            turn={this.props.turn}
                             onCellClick={this.handleCellClick.bind(this)}
                             />);
                     })
                 }
                 <div className="end" style={{display: this.props.winner === 'n' ? 'none' : 'block'}}>
                     <h2>{gameResult}</h2>
-                    <button className="btn btn-primary" onClick={this.props.resetGame}>Reset Game</button>
+                    <button className="btn btn-primary" onClick={this.props.resetGame}>Play Again</button>
                 </div>
             </div>
         );

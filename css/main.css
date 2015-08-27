@@ -52,14 +52,26 @@ body {
     background-color: #3d4250;
 }
 
-.cell-X {
+.cell:hover .fa {
+    opacity: .4;
+}
+
+.cell-X, .cell:hover.cell-X {
     background-color: #dc685a;
+    cursor: not-allowed;
 }
 
-.cell-O {
+
+.cell-O, .cell:hover.cell-O {
     background-color: #ecaf4f;
+    cursor: not-allowed;
 }
 
-.icon {
+.cell .fa {
     margin: 35px 0 0 40px;
+    opacity: 0;
+}
+
+.cell-X .fa, .cell-O .fa, .cell-X:hover .fa, .cell-O:hover .fa {
+    opacity: 1;
 }
